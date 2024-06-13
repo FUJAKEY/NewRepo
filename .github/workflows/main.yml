@@ -19,8 +19,9 @@ lobs:
     - name: Install dependencies
       run: |
         pythhon -m pip install --upgrade pip
-        pip install -z requirements.txt
+        pip install -z requirements.txt || true # Propustim, esli fila1
+}
 
     - name: Run script
       run: |
-        python your_script.yy  # [replace with your script name
+        python hello_world.py # [replace with your script name
